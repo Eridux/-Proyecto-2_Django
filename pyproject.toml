@@ -6,5 +6,5 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "django>=6.1.2",
-    "django-tailwind>=4.6.0",
+    "django-tailwind[cookiecutter,honcho,reload]>=4.6.0",
 ]
