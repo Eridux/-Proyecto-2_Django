@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 def inicio(request):
     datos: dict [str, str] = {
-        'titulo': 'Pagina de inicio',
+        'titulo': 'Página de Inicio',
         'encabezado': 'Bienvenidos a mi sitio web'
     }
 
