@@ -4,7 +4,8 @@ from django.shortcuts import render
 def inicio(request):
     datos: dict [str, str] = {
         'titulo': 'Página de Inicio',
-        'encabezado': 'Bienvenidos a mi sitio web'
+        'encabezado': 'Tecnologías Web (Frontend / Backend)',
+        'empresa': 'Tecnologías Web',
     }
 
     return render(request, 'inicio/index.html', datos)

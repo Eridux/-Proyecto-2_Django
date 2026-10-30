@@ -1,0 +1,82 @@
+    {% load static %}
+
+<!-- NavBar Responsive con javascript y Tailwind 4 -->
+        <section class="transition-all duration-300 w-full">
+            <header class="bg-slate-800 text-slate-100 shadow-sm border-b border-slate-400 shrink-0">
+                <div class="max-w-6xl mx-auto px-4 py-1">
+                    <div class="flex items-center justify-between">
+                        
+                        <!-- Logo -->
+                        <div class="shrink-0 flex items-center gap-3">
+                            <img src="{% static 'images/html.png' %}" alt="Logo" class="h-9 w-8 rounded-2xl">
+                            <p class="text-xl font-bold text-slate-100">{{empresa}}</p>
+                        </div>
+
+                        <!-- Botón hamburguesa (solo móvil) -->
+                        <button 
+                            id="mobile-menu-btn"
+                            class="md:hidden p-2 text-slate-100 hover:text-slate-400 transition-colors"
+                            aria-label="Abrir menú"
+                        >
+                            <!-- Icono hamburguesa -->
+                            <svg id="hamburger-icon" class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5h16M4 12h16M4 19h16"/>
+                            </svg>
+                        
+                            <!-- Icono X -->
+                            <svg id="close-icon" class="w-6 h-6 hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/>
+                            </svg>
+                        </button>
+
+                        <!-- Menú Desktop -->
+                        <nav class="hidden md:flex gap-6">
+                            <a href="#" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">Home</a>
+                            <a href="#" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">Features</a>
+                            <a href="#" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">Pricing</a>
+                            <a href="#" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">Contact</a>
+                        </nav>
+
+                        <!-- Botones Desktop -->
+                        <div class="hidden md:flex gap-2">
+                            <a href="#" class="px-4 py-0.5 text-slate-100 hover:text-slate-400 border border-slate-100 rounded-lg hover:border-slate-400 transition-colors">Login</a>
+                            <a href="#" class="px-4 py-0.5 bg-blue-600 text-white rounded-lg hover:bg-blue-800 transition-colors">Sign Up</a>
+                        </div>
+                    </div>
+
+                    <!-- Menú Mobile (oculto por defecto) -->
+                    <div 
+                        id="mobile-menu" 
+                        class="hidden md:hidden bg-slate-100 border-t border-slate-400 rounded-2xl shadow-lg transition-all duration-200 ease-in-out my-2"
+                    >
+                        <nav class="px-4 py-2 space-y-2">
+                            <a href="#" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">Home</a>
+                            <a href="#" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">Features</a>
+                            <a href="#" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">Pricing</a>
+                            <a href="#" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">Contact</a>
+                            
+                            <!-- Botones Mobile -->
+                            <div class="flex gap-3 items-center py-2 border-t border-slate-400">
+                                <a href="#" class="
+                                    inline-flex h-9 flex-1 items-center justify-center
+                                    rounded-lg border border-slate-400 px-3
+                                    text-sm font-medium text-slate-400
+                                    transition-colors hover:border-slate-800
+                                    hover:text-slate-800"
+                                >
+                                        Login
+                                </a>
+                                <a href="#" class="
+                                    inline-flex h-9 flex-1 items-center justify-center
+                                    rounded-lg border border-transparent bg-blue-600 px-3
+                                    text-sm font-medium text-white
+                                    transition-colors hover:bg-blue-800"
+                                >
+                                    Sign Up
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </section>        
