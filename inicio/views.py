@@ -1,9 +1,11 @@
 from django.shortcuts import render
 
-type values = str | dict
+type values = str | dict | list
 
 # Create your views here.
 def inicio(request):
+    tarjetas: list[int] = list(range(8))
+    
     menues: dict[str,str] = {
         'inicio': 'Inicio',
         'frontend': 'Frontend',
@@ -17,6 +19,7 @@ def inicio(request):
         'encabezado': 'Tecnologías Web (Frontend / Backend)',
         'empresa': 'Tecnologías Web',
         'menues': menues,
+        'tarjetas': 'tarjetas',
     }
 
     return render(request, 'inicio/index.html', datos)
