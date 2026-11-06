@@ -19,7 +19,7 @@ def inicio(request):
         'encabezado': 'Tecnologías Web (Frontend / Backend)',
         'empresa': 'Tecnologías Web',
         'menues': menues,
-        'tarjetas': 'tarjetas',
+        'tarjetas': tarjetas,
     }
 
     return render(request, 'inicio/index.html', datos)
