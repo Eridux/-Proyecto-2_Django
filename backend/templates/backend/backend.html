@@ -1,9 +1,43 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block titulo %}
     {{titulo}}
 {% endblock titulo %}
 
 {% block contenido %}
-    <h1>{{ encabezado }}</h1>
+    <h1 class="
+        text-2xl
+        text-center
+        font-bold
+        text-slate-900
+    
+        ">
+        {{ encabezado }}
+    </h1>
 {% endblock contenido %}
+
+{% block pie %}
+   <h3>Realizado por: Eridux</h3>
+            <div class="flex gap-3"><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#php"></use>
+                </svg>
+            </a><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#python"></use>
+                </svg>
+            </a><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#node"></use>
+                </svg>
+            </a><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#laravel"></use>
+                </svg>
+            </a><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#django"></use>
+                </svg>
+            </a></div>
+{% endblock pie %}

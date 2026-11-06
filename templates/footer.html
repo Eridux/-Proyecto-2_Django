@@ -1,3 +1,26 @@
-<footer class="bg-slate-800 text-slate-100 p-2 shrink-0 flex justify-between items-center">
-            <h3>Pie de página</h3>
+{% load static %} 
+
+<footer class="flex bg-slate-800 text-slate-100 p-2 shrink-0 flex justify-between items-center">
+            <h3>Realizado por: Eridux</h3>
+            <div class="flex gap-3"><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#instagram"></use>
+                </svg>
+            </a><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#youtube"></use>
+                </svg>
+            </a><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#x"></use>
+                </svg>
+            </a><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#linkedin"></use>
+                </svg>
+            </a><a href="#">
+                <svg width="24" height="24">
+                    <use href="{% static 'sprite.svg' %}#github"></use>
+                </svg>
+            </a></div>
         </footer>

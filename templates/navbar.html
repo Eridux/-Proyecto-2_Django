@@ -31,16 +31,12 @@
 
                         <!-- Menú Desktop -->
                         <nav class="hidden md:flex gap-6">
-                            <a href="#" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">{{ menues.inicio }}</a>
-                            <a href="#" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">{{ menues.frontend }}</a>
-                            <a href="#" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">{{ menues.backend }}</a>
+                            <a href="{% url 'inicio' %}" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">{{ menues.inicio }}</a>
+                            <a href="{% url 'frontend' %}" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">{{ menues.frontend }}</a>
+                            <a href="{% url 'backend' %}" class="text-slate-100 hover:text-slate-400 transition-colors font-bold">{{ menues.backend }}</a>
                         </nav>
 
-                        <!-- Botones Desktop -->
-                        <div class="hidden md:flex gap-2">
-                            <a href="#" class="px-4 py-0.5 text-slate-100 hover:text-slate-400 border border-slate-100 rounded-lg hover:border-slate-400 transition-colors">Login</a>
-                            <a href="#" class="px-4 py-0.5 bg-blue-600 text-white rounded-lg hover:bg-blue-800 transition-colors">Sign Up</a>
-                        </div>
+                        
                     </div>
 
                     <!-- Menú Mobile (oculto por defecto) -->
@@ -49,30 +45,9 @@
                         class="hidden md:hidden bg-slate-100 border-t border-slate-400 rounded-2xl shadow-lg transition-all duration-200 ease-in-out my-2"
                     >
                         <nav class="px-4 py-2 space-y-2">
-                            <a href="#" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">{{ menues.inicio }}</a>
-                            <a href="#" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">{{ menues.frontend }}</a>
-                            <a href="#" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">{{ menues.backend }}</a>
-                            
-                            <!-- Botones Mobile -->
-                            <div class="flex gap-3 items-center py-2 border-t border-slate-400">
-                                <a href="#" class="
-                                    inline-flex h-9 flex-1 items-center justify-center
-                                    rounded-lg border border-slate-400 px-3
-                                    text-sm font-medium text-slate-400
-                                    transition-colors hover:border-slate-800
-                                    hover:text-slate-800"
-                                >
-                                        Login
-                                </a>
-                                <a href="#" class="
-                                    inline-flex h-9 flex-1 items-center justify-center
-                                    rounded-lg border border-transparent bg-blue-600 px-3
-                                    text-sm font-medium text-white
-                                    transition-colors hover:bg-blue-800"
-                                >
-                                    Sign Up
-                                </a>
-                            </div>
+                            <a href="{% url 'inicio' %}" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">{{ menues.inicio }}</a>
+                            <a href="{% url 'frontend' %}" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">{{ menues.frontend }}</a>
+                            <a href="{% url 'backend' %}" class="block px-2 py-1 text-slate-500 hover:text-slate-800 hover:bg-slate-300 rounded-lg transition-colors">{{ menues.backend }}</a>
                         </nav>
                     </div>
                 </div>

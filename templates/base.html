@@ -26,7 +26,13 @@
                 {% endblock contenido %} 
             </div>
         </main>
-        {% include 'footer.html' %}
+        <footer class="flex bg-slate-800 text-slate-100 p-2 shrink-0 flex justify-between items-center" >
+            
+            {% block pie %}
+                
+            {% endblock pie %} 
+
+        </footer>
         
     </div>
 

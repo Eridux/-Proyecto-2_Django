@@ -8,8 +8,6 @@
     --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
-    --color-blue-600: oklch(54.6% 0.245 262.881);
-    --color-blue-800: oklch(42.4% 0.199 265.638);
     --color-slate-100: oklch(96.8% 0.007 247.896);
     --color-slate-300: oklch(86.9% 0.022 252.894);
     --color-slate-400: oklch(70.4% 0.04 256.788);
@@ -21,15 +19,12 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-6xl: 72rem;
-    --text-sm: 0.875rem;
-    --text-sm--line-height: calc(1.25 / 0.875);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
-    --font-weight-medium: 500;
     --font-weight-bold: 700;
     --tracking-normal: 0em;
     --leading-normal: 1.5;
@@ -12557,9 +12552,6 @@
   .justify-center {
     justify-content: center;
   }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
@@ -12984,14 +12976,8 @@
       border-color: currentColor;
     }
   }
-  .border-slate-100 {
-    border-color: var(--color-slate-100);
-  }
   .border-slate-400 {
     border-color: var(--color-slate-400);
-  }
-  .border-transparent {
-    border-color: transparent;
   }
   @layer daisyui.l1.l2.l3 {
     .vc .vc-time {
@@ -13447,9 +13433,6 @@
       }
     }
   }
-  .bg-blue-600 {
-    background-color: var(--color-blue-600);
-  }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
@@ -13839,14 +13822,8 @@
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
-  .px-3 {
-    padding-inline: calc(var(--spacing) * 3);
-  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
-  }
-  .py-0\.5 {
-    padding-block: calc(var(--spacing) * 0.5);
   }
   .py-1 {
     padding-block: var(--spacing);
@@ -13912,10 +13889,6 @@
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -14045,10 +14018,6 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .font-medium {
-    --tw-font-weight: var(--font-weight-medium);
-    font-weight: var(--font-weight-medium);
   }
   .tracking-normal {
     --tw-tracking: var(--tracking-normal);
@@ -14494,17 +14463,11 @@
   .text-slate-100 {
     color: var(--color-slate-100);
   }
-  .text-slate-400 {
-    color: var(--color-slate-400);
-  }
   .text-slate-500 {
     color: var(--color-slate-500);
   }
   .text-slate-900 {
     color: var(--color-slate-900);
-  }
-  .text-white {
-    color: var(--color-white);
   }
   @layer daisyui.l1.l2.l3 {
     .vc .vc-header__content {
@@ -15364,15 +15327,6 @@
     }
   }
   @media (hover: hover) {
-    .hover\:border-slate-400:hover {
-      border-color: var(--color-slate-400);
-    }
-    .hover\:border-slate-800:hover {
-      border-color: var(--color-slate-800);
-    }
-    .hover\:bg-blue-800:hover {
-      background-color: var(--color-blue-800);
-    }
     .hover\:bg-slate-300:hover {
       background-color: var(--color-slate-300);
     }
