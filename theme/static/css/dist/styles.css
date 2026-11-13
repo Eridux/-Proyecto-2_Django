@@ -12014,6 +12014,9 @@
   .h-9 {
     height: calc(var(--spacing) * 9);
   }
+  .h-56 {
+    height: calc(var(--spacing) * 56);
+  }
   .h-screen {
     height: 100vh;
   }
@@ -12129,6 +12132,9 @@
   }
   .w-26 {
     width: calc(var(--spacing) * 26);
+  }
+  .w-28 {
+    width: calc(var(--spacing) * 28);
   }
   .w-full {
     width: 100%;
@@ -14073,6 +14079,15 @@
       font-size: 1.25rem;
       --otp-size: calc(var(--size-field, 0.25rem) * 6);
     }
+  }
+  .text-\[16px\] {
+    font-size: 16px;
+  }
+  .text-\[18px\] {
+    font-size: 18px;
+  }
+  .text-\[28px\] {
+    font-size: 28px;
   }
   .leading-normal {
     --tw-leading: var(--leading-normal);

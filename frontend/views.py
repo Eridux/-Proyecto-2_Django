@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from django.db.models.manager import BaseManager
+from .models import Frontend
 
-type values = str | dict
+type values = str | dict | BaseManager
 # Create your views here.
 def frontend(request):
+    tarjetas: BaseManager = Frontend.objects.all()
+    
     menues: dict[str,str] = {
         'inicio': 'Inicio',
         'frontend': 'Frontend',
@@ -14,6 +18,7 @@ def frontend(request):
         'encabezado': 'Tecnologías de lado de el Cliente',
         'empresa': 'Tecnologías Web',
         'menues': menues,
+        'tarjetas': tarjetas,
     }
 
     return render(request, 'frontend/frontend.html', datos)

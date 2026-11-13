@@ -5,8 +5,8 @@
     {{titulo}}
 {% endblock titulo %}
 
-{% block contenido %}
-    <h1 class="
+{% block encabezado %}
+     <h1 class="
         text-2xl
         text-center
         font-bold
@@ -15,6 +15,54 @@
         ">
         {{ encabezado }}
     </h1>
+{% endblock encabezado %}
+
+{% block contenido %}
+   <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
+
+    {% for item in tarjetas %}
+    <!-- Card horizontal -->
+    <section class="flex flex-col bg-gray-200 rounded-2xl max-w-3xl mx-auto overflow-hidden border border-gray-400 shadow-lg my-4">
+
+        <!-- Titulo de la card -->
+        <header class="px-4 py-4 bg-gray-300 border-b border-gray-400">
+            <h2 class="text-xl text-gray-600 font-semibold">{{ item.titulo }}</h2>
+        </header>
+
+        <!-- Cuerpo de la Card -->
+        <div class="flex flex-col flex-1 md:flex-row items-start gap-4 p-4">
+            <article class="w-full">
+                {# Si item.images es ImageField usa .url; si es string usa static #}
+                {% if item.images.url %}
+                    <img class="w-full h-56 object-cover rounded-xl"
+                         src="{{ item.images.url }}"
+                         alt="{{ item.titulo }}">
+                {% else %}
+                    <img class="w-full h-56 object-cover rounded-xl"
+                         src="{% static 'images/' %}{{ item.images }}"
+                         alt="{{ item.titulo }}">
+                {% endif %}
+            </article>
+
+            <article class="w-full">
+                <h2 class="text-gray-700 text-[28px] leading-relaxed font-semibold">{{ item.tema }}</h2>
+                <p class="text-gray-700 leading-relaxed">{{ item.contenido }}</p>
+            </article>
+        </div>
+
+        <!-- Pie de página de la card -->
+        <footer class="flex justify-center md:justify-end px-4 py-4 bg-gray-300 border-t border-gray-400">
+            <div class="flex flex-col gap-3 md:flex-row md:gap-2">
+                <a class="inline-flex items-center bg-blue-600 hover:bg-blue-900 transition text-white py-2 px-1.5 w-28 justify-center rounded-lg shadow-lg"
+                   href="#xxx" target="_blank" rel="noopener">Ver...</a>
+                <a class="inline-flex items-center bg-blue-600 hover:bg-blue-900 transition text-white py-2 px-1.5 w-28 justify-center rounded-lg shadow-lg"
+                   href="#xxx" download="Guía de html.pdf">Descargar</a>
+            </div>
+        </footer>
+    </section>
+    {% endfor %}
+
+</div>
 {% endblock contenido %}
 
 {% block pie %}

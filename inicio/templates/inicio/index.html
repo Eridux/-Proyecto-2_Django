@@ -25,17 +25,18 @@
         <section class="flex flex-col bg-gray-200 rounded-2xl max-w-3xl mx-auto overflow-hidden border border-gray-400 shadow-lg my-4">
             <!-- Titulo de la card -->
             <header class="px-4 py-4 bg-gray-300 border-b border-gray-400">
-                <h2 class="text-xl text-gray-600 font-semibold">Titulo de la tarjeta - {{ item }}</h2>
+                <h2 class="text-xl text-gray-600 font-semibold">{{ item.titulo }}</h2>
             </header>
 
             <!-- Cuerpo de la Card -->
             <div class="flex flex-col flex-1 md:flex-row items-start gap-4 p-4">
                 <article class="w-full">
-                    <img class="w-full object-cover size-full rounded-xl" src="https://placehold.co/600x600.png" alt="frontend">
+                    <img class="w-full object-cover size-full rounded-xl" src="{% static 'images/' %}{{ item.images }}">
                 </article>
                 <article class="w-full">
+                    <h2 class="text-gray-700 text-[28px] leading-relaxed semifontbold">{{ item.tema }}</h2>
                     <p class="text-gray-700 leading-relaxed">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit quod tenetur quos quas ipsum provident dolores totam corrupti corporis possimus, dolor laborum quaerat commodi ipsa delectus quo voluptas cum non quasi temporibus esse facere eveniet asperiores? Voluptate ea porro iste accusantium veniam, quos voluptas. Sit, odio voluptate! Eos, aspernatur ullam?
+                        {{ item.contenido }}
                     </p>
                 </article>
             </div>
