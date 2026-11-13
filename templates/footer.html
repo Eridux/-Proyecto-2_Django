@@ -1,26 +1,24 @@
 {% load static %} 
 
-<footer class="flex bg-slate-800 text-slate-100 p-2 shrink-0 flex justify-between items-center">
-            <h3>Realizado por: Eridux</h3>
+   <h3>Realizado por: Eridux</h3>
             <div class="flex gap-3"><a href="#">
                 <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#instagram"></use>
+                    <use href="{% static 'sprite.svg' %}{{pie.primero}}"></use>
                 </svg>
             </a><a href="#">
                 <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#youtube"></use>
+                    <use href="{% static 'sprite.svg' %}{{pie.segundo}}"></use>
                 </svg>
             </a><a href="#">
                 <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#x"></use>
+                    <use href="{% static 'sprite.svg' %}{{pie.tercero}}"></use>
                 </svg>
             </a><a href="#">
                 <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#linkedin"></use>
+                    <use href="{% static 'sprite.svg' %}{{pie.cuarto}}"></use>
                 </svg>
             </a><a href="#">
                 <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#github"></use>
+                    <use href="{% static 'sprite.svg' %}{{pie.quinto}}"></use>
                 </svg>
             </a></div>
-        </footer>

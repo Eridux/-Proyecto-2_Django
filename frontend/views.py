@@ -13,12 +13,20 @@ def frontend(request):
         'backend': 'Backend',
      }
      
+    pie: dict[str,str] = {
+             'primero': '#html',
+             'segundo': '#css',
+             'tercero': '#js',
+             'cuarto': '#tailwindcss',
+             'quinto': '#react'
+         }
     datos: dict [str, values] = {
         'titulo': 'Página de Frontend',
         'encabezado': 'Tecnologías de lado de el Cliente',
         'empresa': 'Tecnologías Web',
         'menues': menues,
         'tarjetas': tarjetas,
+        'pie': pie,
     }
 
     return render(request, 'frontend/frontend.html', datos)

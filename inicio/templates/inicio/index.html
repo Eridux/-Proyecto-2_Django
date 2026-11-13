@@ -58,26 +58,5 @@
    
 
 {% block pie %}
-   <h3>Realizado por: Eridux</h3>
-            <div class="flex gap-3"><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#instagram"></use>
-                </svg>
-            </a><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#youtube"></use>
-                </svg>
-            </a><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#x"></use>
-                </svg>
-            </a><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#linkedin"></use>
-                </svg>
-            </a><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#github"></use>
-                </svg>
-            </a></div>
+    {% include 'footer.html' %}
 {% endblock pie %}

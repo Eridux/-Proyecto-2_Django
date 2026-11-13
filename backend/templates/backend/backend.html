@@ -29,26 +29,18 @@
             <h2 class="text-xl text-gray-600 font-semibold">{{ item.titulo }}</h2>
         </header>
 
-        <!-- Cuerpo de la Card -->
-        <div class="flex flex-col flex-1 md:flex-row items-start gap-4 p-4">
-            <article class="w-full">
-                {# Si item.images es ImageField usa .url; si es string usa static #}
-                {% if item.images.url %}
-                    <img class="w-full h-56 object-cover rounded-xl"
-                         src="{{ item.images.url }}"
-                         alt="{{ item.titulo }}">
-                {% else %}
-                    <img class="w-full h-56 object-cover rounded-xl"
-                         src="{% static 'images/' %}{{ item.images }}"
-                         alt="{{ item.titulo }}">
-                {% endif %}
-            </article>
-
-            <article class="w-full">
-                <h2 class="text-gray-700 text-[28px] leading-relaxed font-semibold">{{ item.tema }}</h2>
-                <p class="text-gray-700 leading-relaxed">{{ item.contenido }}</p>
-            </article>
-        </div>
+         <!-- Cuerpo de la Card -->
+            <div class="flex flex-col flex-1 md:flex-row items-start gap-4 p-4">
+                <article class="w-full">
+                    <img class="w-full object-cover size-full rounded-xl" src="{% static 'images/' %}{{ item.images }}">
+                </article>
+                <article class="w-full">
+                    <h2 class="text-gray-700 text-[28px] leading-relaxed semifontbold">{{ item.tema }}</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        {{ item.contenido }}
+                    </p>
+                </article>
+            </div>
 
         <!-- Pie de página de la card -->
         <footer class="flex justify-center md:justify-end px-4 py-4 bg-gray-300 border-t border-gray-400">
@@ -66,26 +58,5 @@
 {% endblock contenido %}
 
 {% block pie %}
-   <h3>Realizado por: Eridux</h3>
-            <div class="flex gap-3"><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#php"></use>
-                </svg>
-            </a><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#python"></use>
-                </svg>
-            </a><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#node"></use>
-                </svg>
-            </a><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#laravel"></use>
-                </svg>
-            </a><a href="#">
-                <svg width="24" height="24">
-                    <use href="{% static 'sprite.svg' %}#django"></use>
-                </svg>
-            </a></div>
+   {% include 'footer.html' %}
 {% endblock pie %}

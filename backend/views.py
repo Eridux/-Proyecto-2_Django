@@ -14,12 +14,20 @@ def backend(request):
         'backend': 'Backend',
      }    
     
+    pie: dict[str,str] = {
+            'primero': '#php',
+            'segundo': '#python',
+            'tercero': '#node',
+            'cuarto': '#laravel',
+            'quinto': '#django'
+        }
     datos: dict [str, values] = {
         'titulo': 'Página de Backend',
         'encabezado': 'Tecnologías de lado de el Servidor',
         'empresa': 'Tecnologías Web',
         'menues': menues, 
-        'tarjetas': tarjetas,       
+        'tarjetas': tarjetas, 
+        'pie': pie,     
     }
 
     return render(request, 'backend/backend.html', datos)

@@ -15,13 +15,20 @@ def inicio(request):
     }
     
     
-    
+    pie: dict[str,str] = {
+        'primero': '#instagram',
+        'segundo': '#youtube',
+        'tercero': '#x',
+        'cuarto': '#linkedin',
+        'quinto': '#github'
+    }
     datos: dict [str, values] = {
         'titulo': 'Página de Inicio',
         'encabezado': 'Tecnologías Web (Frontend / Backend)',
         'empresa': 'Tecnologías Web',
         'menues': menues,
         'tarjetas': tarjetas,
+        'pie': pie,
     }
 
     return render(request, 'inicio/index.html', datos)
