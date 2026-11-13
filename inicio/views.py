@@ -1,10 +1,11 @@
 from django.shortcuts import render
-
+from .models import Inicio
 type values = str | dict | list
 
 # Create your views here.
 def inicio(request):
-    tarjetas: list[int] = list(range(8))
+    #tarjetas: list[int] = list(range(8))
+    tarjetas = Inicio.objects.all()
     
     menues: dict[str,str] = {
         'inicio': 'Inicio',
